@@ -1,9 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "0qHg0zTLeJrofazQCdbkfp53vWemBHgw3Q41NQYNk9M1Bt4ilG28dmOSl0X8qSC0sSkl7ON8gAFlOg0K3PhtXQ==",
+  "dgSpecHash": "5997E4HQpAukiebdtV8mRMcx9h/l2VnsaPqq/oew7dZAZZdzjQDxHBKiTwlGzEqLsf/zQujj/cuMaEeHSm72Dw==",
   "success": true,
   "projectFilePath": "D:\\projects\\getting-dot-net-web-api\\getting-dot-net-web-api\\getting-dot-net-web-api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\monty\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\monty\\.nuget\\packages\\microsoft.openapi\\1.1.4\\microsoft.openapi.1.1.4.nupkg.sha512",
+    "C:\\Users\\monty\\.nuget\\packages\\swashbuckle.aspnetcore\\5.5.1\\swashbuckle.aspnetcore.5.5.1.nupkg.sha512",
+    "C:\\Users\\monty\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.5.1\\swashbuckle.aspnetcore.swagger.5.5.1.nupkg.sha512",
+    "C:\\Users\\monty\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.5.1\\swashbuckle.aspnetcore.swaggergen.5.5.1.nupkg.sha512",
+    "C:\\Users\\monty\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.5.1\\swashbuckle.aspnetcore.swaggerui.5.5.1.nupkg.sha512",
     "C:\\Users\\monty\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
   ],
   "logs": []
