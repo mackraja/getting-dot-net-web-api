@@ -8,12 +8,12 @@ namespace getting_dot_net_web_api.IServices
 {
     public interface IStudentService
     {
-        List<Student> GetAll();
+        IList<Student> GetAll();
 
         Student Get(int StudentId);
 
-        List<Student> Save(Student Student);
+        IList<Student> Save(Student Student);
 
-        List<Student> Delete(int StudentId);
+        IList<Student> Delete(int StudentId);
     }
 }

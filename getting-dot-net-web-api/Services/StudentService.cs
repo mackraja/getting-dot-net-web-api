@@ -25,7 +25,22 @@ namespace getting_dot_net_web_api.Services
             }
         }
 
-        List<Student> IStudentService.Delete(int StudentId)
+        public IList<Student> Delete(int StudentId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IList<Student> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IList<Student> Save(Student Student)
+        {
+            throw new NotImplementedException();
+        }
+
+        IList<Student> IStudentService.Delete(int StudentId)
         {
             _students.RemoveAll(x => x.StudentId == StudentId);
             return _students;
@@ -36,12 +51,12 @@ namespace getting_dot_net_web_api.Services
             return _students.SingleOrDefault(x => x.StudentId == StudentId);            
         }
 
-        List<Student> IStudentService.GetAll()
+        IList<Student> IStudentService.GetAll()
         {
             return _students;
         }
 
-        List<Student> IStudentService.Save(Student Student)
+        IList<Student> IStudentService.Save(Student Student)
         {
             _students.Add(Student);
             return _students;

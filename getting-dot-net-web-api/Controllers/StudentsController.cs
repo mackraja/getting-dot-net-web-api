@@ -37,14 +37,14 @@ namespace getting_dot_net_web_api.Controllers
 
         // POST api/<StudentsController>
         [HttpPost]
-        public List<Student> Post([FromBody] Student value)
+        public IList<Student> Post([FromBody] Student value)
         {
             return _studentService.Save(value);
         }
 
         // DELETE api/<StudentsController>/5
         [HttpDelete("{id}")]
-        public List<Student> Delete(int id)
+        public IList<Student> Delete(int id)
         {
             return _studentService.Delete(id);
         }
