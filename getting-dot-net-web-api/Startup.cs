@@ -119,6 +119,20 @@ namespace getting_dot_net_web_api
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", ".net Core 3.1 API - V1");
             });
 
+            app.Use(async (context, next) =>
+            {
+                await next();
+                if (context.Response.StatusCode == 404 && !System.IO.Path.HasExtension(context.Request.Path.Value))
+                {
+                    context.Request.Path = "/index.html";
+                    await next();
+                }
+            });
+
+            app.UseDefaultFiles();
+
+            app.UseStaticFiles();
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
