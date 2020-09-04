@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace getting_dot_net_web_api.Models
 {
-    public partial class Roles
+    public class Roles
     {
         public int Id { get; set; }
         public string Name { get; set; }

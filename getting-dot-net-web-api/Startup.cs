@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using getting_dot_net_web_api.DataLayer;
 using getting_dot_net_web_api.IServices;
 using getting_dot_net_web_api.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -10,6 +11,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -32,11 +34,14 @@ namespace getting_dot_net_web_api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllersWithViews();
+
+            // DB connection
+            services.AddDbContext<AppDbContext>(o => o.UseSqlServer(Configuration.GetConnectionString("dbString")));
+
             services.AddControllers();
             services.AddMvc();
             services.AddCors();
-            // Command to generate models in sqlserver
-            // Scaffold - DbContext "Server=.\SQLExpress;Database=GettingStartedWebApi;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer - OutputDir Models
             
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
