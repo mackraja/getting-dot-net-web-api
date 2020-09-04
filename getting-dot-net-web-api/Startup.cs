@@ -35,6 +35,9 @@ namespace getting_dot_net_web_api
             services.AddControllers();
             services.AddMvc();
             services.AddCors();
+            // Command to generate models in sqlserver
+            // Scaffold - DbContext "Server=.\SQLExpress;Database=GettingStartedWebApi;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer - OutputDir Models
+            
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
             {
