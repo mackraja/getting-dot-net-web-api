@@ -1,0 +1,12 @@
+<a
+    [routerLink]="[index]"
+    routerLinkActive="active"
+    class="list-group-item clearfix list-group-item-action mt-2">
+    <div class="d-flex w-200 justify-content-between">
+        <div>
+            <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
+            <small>{{ recipe.description }}</small>
+        </div>
+        <img src="{{ recipe.imagePath }}" alt="{{ recipe.name }}" class="img-responsive" style="max-height: 50px;">
+    </div>
+</a>
